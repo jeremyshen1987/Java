@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class GameHelper {
@@ -75,5 +76,20 @@ public class GameHelper {
         }
         System.out.println("All Coordinates: " + allShipCoordinates);
     }
+
+    ArrayList getAllCoordinates(){
+        return allShipCoordinates;
+    }
+
+    String getUserInput(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Guess a coordinate: (e.g: A1) ");
+
+        String guess = input.nextLine();
+        System.out.println("your guessed: " + guess);
+        
+        return guess;
+    }
+
 
 }
